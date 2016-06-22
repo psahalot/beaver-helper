@@ -67,6 +67,10 @@
          		return;
          	}
 
+            if ( !is_admin() ) {
+                    include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+            }
+
             /** Show these items only if Beaver Builder plugin is actually installed */
 	        if ( ( function_exists( 'is_plugin_active' ) && ( is_plugin_active( 'beaver-builder-lite-version/fl-builder.php' ) || is_plugin_active ('bb-plugin/fl-builder.php') ) ) ) {
                 global $wp_admin_bar;
