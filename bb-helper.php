@@ -54,21 +54,6 @@
          } // END public function __construct
 
          /**
-          * Activate the plugin
-          */
-         public static function activate() {
-             // Do nothing
-         } // END public static function activate
-
-         /**
-          * Deactivate the plugin
-          */
-         public static function deactivate() {
-             // Do nothing
-         } // END public static function deactivate
-
-
-         /**
           * Adds admin bar items for easy access to the theme creator and editor
           */
          public function ps_bb_helper_menu() {
@@ -223,9 +208,6 @@
  } // END if(!class_exists('PS_Beaver_Helper'))
 
 if( class_exists( 'PS_Beaver_Helper' ) ) {
-    // Installation and uninstallation hooks
-    register_activation_hook(__FILE__, array('PS_Beaver_Helper', 'activate'));
-    register_deactivation_hook(__FILE__, array('PS_Beaver_Helper', 'deactivate'));
 
     // instantiate the plugin class
     $ps_beaver_helper = new PS_Beaver_Helper();
